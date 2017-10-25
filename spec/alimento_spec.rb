@@ -24,6 +24,44 @@ describe Alimento do
   end
 
   it "Debe existir un nombre para el alimento" do
+     expect(@alimento1.nombre).to be == "Huevo frito"
+  end
+
+  it "Debe existir la cantidad de proteínas del alimento en gramos" do
+     expect(@alimento1.proteinas).to be == 14.1
+  end
+
+  it "Debe existir la candidad de glucidos del alimento en gramos." do
+     expect(@alimento1.glucidos).to be == 0.0
+  end
+
+  it "Debe existir la candidad de grasas del alimento en gramos" do
+     expect(@alimento1.lipidos).to be == 19.5
+  end
+
+  it "Existe un metodo para obtener el nombre del alimento" do
      expect(@alimento1.get_nombre).to be == "Huevo frito"
   end
+
+
+  it "Existe un metodo para obtener la cantidad de proteinas del alimento" do
+     expect(@alimento1.get_proteinas).to be == 14.1
+  end
+
+  it "Existe un metodo para obtener la cantidad de glucidos de un alimento" do
+     expect(@alimento1.get_glucidos).to be == 0.0
+  end
+
+  it "Existe un metodo para obtener la cantidad de grasas de un alimento" do
+     expect(@alimento1.get_lipidos).to be == 19.5
+  end
+
+  it "Existe un metodo para obtener el alimento formateado" do
+     expect(@alimento1.to_s).to be == "Huevo frito, 14.1, 0.0, 19.5"
+  end
+
+  it "Existe un metodo para obtener el valor energetico de un alimento." do
+     expect(@alimento1.get_energetico).to be == 231.9
+  end
+
 end

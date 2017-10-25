@@ -20,6 +20,11 @@ class Alimentos
 		@lipidos
 	end
 
+	def get_energetico
+		@aux = (@glucidos * 4) + (@lipidos * 9) + (@proteinas * 4)
+		@aux
+	end
+
 	def to_s
 		"#{nombre}, #{proteinas}, #{glucidos}, #{lipidos}"
 	end
