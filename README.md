@@ -1,3 +1,3 @@
-# Practica de Laboratorio 6
+# Practica de Laboratorio 7
 
 * Nombre del Alumno: Joram Real Gómez
