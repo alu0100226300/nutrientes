@@ -141,4 +141,25 @@ describe Alimento do
 	end
 
   end
+
+  context Nodo do
+	before :each do
+		@alimento1 = Alimentos.new("Huevo frito", 14.1, 0.0, 19.5)
+		@alimento2 = Alimentos.new("Leche vaca", 3.3, 4.8, 3.2)
+		@alimento3 = Alimentos.new("Yogurt", 3.8, 4.8, 3.8)
+		@migrupo1 = Grupo_lacteos.new(
+		"Huevos, lacteos y helados",
+		[ @alimento1, @alimento2, @alimento3 ])
+
+		@nodo1=Nodo.new(@migrupo1,nil,nil)
+	end
+
+	it 'Existe valor de nodo' do
+	      expect(@nodo1.value).to eq(@migrupo1)
+	end
+
+	it 'Siguiente de nodo es nil' do
+		expect(@nodo1.next).to equal(nil)
+	end
+  end
 end
