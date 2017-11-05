@@ -2,7 +2,7 @@ class Grupo
 
 include Comparable
 
-	attr_reader :titulo :alimentos
+	attr_reader :titulo, :alimentos
 	def initialize titulo, alimentos
 		@titulo, @alimentos = titulo, alimentos
 	end
