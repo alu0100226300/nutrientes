@@ -40,7 +40,7 @@ include Enumerable
        @cola=@cola.next
     end
     
-    def extrar_final()
+    def extraer_final()
        @cabeza = @cabeza.prev
     end
 

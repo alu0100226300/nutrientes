@@ -219,5 +219,11 @@ describe Alimento do
 	        @lista1.extraer_inicio()
         	expect(x =@lista1.cabeza.value).to equal(@migrupo4)
 	end
+
+	it 'Se extrae el ultimo elemento de la lista' do
+        	@lista1.insertar_varios([@migrupo1,@migrupo2,@migrupo3,@migrupo4])
+	        @lista1.extraer_final()
+        	expect(x =@lista1.cola.value).to equal(@migrupo1)
+	end
   end
 end
