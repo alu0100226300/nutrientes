@@ -136,8 +136,8 @@ describe Alimento do
 		expect(@migrupo1.is_a? Grupo_carnes).to eq false
 	end
 
-	it 'Prueba de no pertenencia a Grupo_edad (clase hija) respond_to' do
-		expect(@migrupo1.respond_to? "Menu_carnes").to eq false
+	it 'Prueba de no pertenencia a Grupo_carnes (clase hija) respond_to' do
+		expect(@migrupo1.respond_to? "Grupo_carnes").to eq false
 	end
 
   end
