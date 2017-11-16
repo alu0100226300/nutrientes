@@ -1,0 +1,16 @@
+Thu, 16 Nov 2017 10:50:51 +0000
+./lib/alimento/grupo.rb	Sun, 05 Nov 2017 11:13:05 +0000
+./lib/alimento/alimentos.rb	Sun, 05 Nov 2017 10:22:43 +0000
+./lib/alimento/version.rb	Wed, 25 Oct 2017 14:51:40 +0100
+./lib/alimento/lista.rb	Fri, 10 Nov 2017 11:21:45 +0000
+./lib/alimento.rb	Sun, 05 Nov 2017 11:49:58 +0000
+./bin/setup	Wed, 25 Oct 2017 14:51:44 +0100
+./bin/console	Wed, 25 Oct 2017 14:51:44 +0100
+./spec/spec_helper.rb	Sun, 05 Nov 2017 11:09:09 +0000
+./spec/alimento_spec.rb	Thu, 16 Nov 2017 10:44:53 +0000
+./Gemfile.lock	Thu, 02 Nov 2017 11:17:40 +0000
+./Gemfile	Wed, 25 Oct 2017 14:51:40 +0100
+./README.md	Sun, 05 Nov 2017 12:16:04 +0000
+./Rakefile	Wed, 25 Oct 2017 14:51:40 +0100
+./Guardfile	Thu, 02 Nov 2017 11:17:53 +0000
+./alimento.gemspec	Thu, 02 Nov 2017 11:17:07 +0000
