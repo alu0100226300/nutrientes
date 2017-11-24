@@ -437,6 +437,10 @@ context 'Comidas' do
         	expect(@compota1.to_s).to be == "\nCompota\n\nConcentraciones: [6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9]\nPeriodo de Tiempo: 5 minutos\n\nAIBC: 28.0"
     	end
 
+	it 'AIBC compota' do
+		expect(@compota1.get_aibc).to be == 28.0
+	end
+
 	it 'Individuo existe' do
 	        expect(@individuo1.to_s).to be == "\Individuo 1\nAlimentos:\n\nCompota\n\nConcentraciones: [6.7, 6.5, 6.8, 6.9, 7.0, 7.1, 6.9, 6.9, 6.9, 6.7, 6.9, 7.3, 7.0, 7.0, 7.2, 7.1, 6.8, 7.2, 7.3, 7.0, 6.8, 6.7, 6.8, 6.7, 6.9]\nPeriodo de Tiempo: 5 minutos\n\nAIBC: 28.0\nYogurt\n\nConcentraciones: [6.1, 6.6, 6.3, 6.3, 6.1, 6.9, 6.8, 6.5, 6.4, 6.9, 6.8, 6.5, 6.3, 6.2, 6.7, 6.2, 5.9, 5.8, 5.8, 5.8, 5.8, 5.8, 5.9, 6.2, 6.4]\nPeriodo de Tiempo: 5 minutos\n\nAIBC: 30.5\nChocolate\n\nConcentraciones: [6.5, 6.5, 6.7, 6.5, 6.5, 6.8, 6.7, 6.2, 6.5, 7.2, 6.9, 7.0, 6.3, 6.2, 6.1, 5.9, 5.8, 6.1, 6.7, 6.7, 6.6, 6.7, 6.9, 7.2, 7.1]\nPeriodo de Tiempo: 5 minutos\n\nAIBC: 18.5\nGlucosa\n\nConcentraciones: [4.9, 5.3, 5.9, 6.7, 7.2, 7.6, 8.0, 8.2, 8.2, 8.4, 8.3, 8.3, 8.0, 7.5, 7.1, 6.8, 6.8, 6.9, 6.8, 6.3, 6.2, 6.3, 6.2, 6.3, 6.1]\nPeriodo de Tiempo: 5 minutos\n\nAIBC: 256.0\n"
 	end
