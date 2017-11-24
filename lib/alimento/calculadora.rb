@@ -13,19 +13,22 @@ class Calculadora
     lista_nombres.each do |nombre|
       cont=0
       igind=0
-      #puts nombre
-      for j in 0..@individuos.length-1
-	glucosa=@individuos[j].get_glucosa.to_f
-        #puts glucosa
-        aibc=@individuos[j].get_aibc(nombre)
-        #puts aibc
+      #for j in 0..@individuos.length-1
+	#glucosa=@individuos[j].get_glucosa.to_f
+        #aibc=@individuos[j].get_aibc(nombre)
+        #aux=aibc/glucosa*100
+        #igind=igind+aux
+	#cont=cont+1
+      #end
+
+      @individuos.each do |i|
+	glucosa=i.get_glucosa.to_f
+        aibc=i.get_aibc(nombre)
         aux=aibc/glucosa*100
-        #puts aux
         igind=igind+aux
 	cont=cont+1
       end
       igind=igind/cont
-      #puts igind
       @resultados << nombre + " " + igind.round(2).to_s + "\n"
     end
   end

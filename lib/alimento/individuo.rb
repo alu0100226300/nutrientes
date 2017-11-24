@@ -12,13 +12,17 @@ class Individuo
   end
 
   def get_aibc(nombre)
-    for j in 0..@alimentos.length-1
-        if @alimentos[j].get_nombre==nombre
-		return @alimentos[j].get_aibc
-        end
+    #for j in 0..@alimentos.length-1
+    #    if @alimentos[j].get_nombre==nombre
+	#	return @alimentos[j].get_aibc
+      #  end
+    #end
+    @alimentos.each do |out|
+	if out.get_nombre==nombre
+		return out.get_aibc
+	end
     end
   end
-
   #metodo que nos devuelve una lista con los nombres de todos los alimentos
   def get_lista_nombres()
     lista = []
