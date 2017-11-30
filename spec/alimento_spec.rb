@@ -519,5 +519,33 @@ end
             #end
      end  
 
+
+ it "Nuevo array con los elementos ordenados por su valor energético usando el método each" do
+            @aux = []
+            for i in 0..@array.size-1
+                  @aux << @array[i].get_energetico
+            end
+            Benchmark.bm do |e| 
+                e.report("each:"){
+                swapped = true
+                while swapped do
+                    swapped = false
+                    (0..@aux.size-2).each_with_index do  |j|
+                        if  @aux[j] > @aux[j + 1]
+                            @aux[j], @aux[j + 1] = @aux[j + 1], @aux[j]
+                            swapped = true
+                        end
+                    end
+                end
+                }
+            end
+            #for i in 0..@aux.size-1
+            #  puts @aux[i]
+            #end
+            
+            
+        end
+
+
 end
 end
