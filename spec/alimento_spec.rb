@@ -547,5 +547,17 @@ end
         end
 
 
+  it "Nuevo array con los elementos ordenados por su valor energético usando el método sort" do
+            aux = []
+            Benchmark.bm do |s| 
+                s.report("sort:"){
+                    aux = @array.sort {|x,y| x.get_energetico <=> y.get_energetico}
+                }
+            end
+            aux.each{|i| @lista1.insertar(i)}
+            #@lista1.to_s  
+            expect(@array).to match_array(aux)
+        end  
+
 end
 end
