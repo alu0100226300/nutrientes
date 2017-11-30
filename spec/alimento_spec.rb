@@ -496,5 +496,28 @@ before :each do
 
 end
 
+     it "Nuevo array con los elementos ordenados por su valor energético usando bucles for" do
+            @each = @array
+            Benchmark.bm do |f| 
+                f.report("for:"){
+                swapped = true
+                n = @each.size-1
+                while swapped do
+                  swapped = false
+                  for i in 0..n-1
+                    if @each[i].get_energetico > @each[i+1].get_energetico
+                        @each[i], @each[i + 1] = @each[i + 1], @each[i]
+                        swapped = true
+                    end
+                  end
+                end
+                }
+            end
+            #puts " Vector ordenado con for"
+            #for i in 0..@each.size-1
+            #  puts @each[i].get_energetico
+            #end
+     end  
+
 end
 end
