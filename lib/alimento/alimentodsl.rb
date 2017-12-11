@@ -8,36 +8,36 @@ class AlimentoDSL
     instance_eval &block
   end
 
-  def vegetal(options = {})
-    platos << " (#{options[:titulo]})" if options[:titulo]
+  def vegetal(titulo, options = {})
+    platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
     platos << " (#{options[:gramos]})" if options[:gramos]
     platos << "\n"
   end
 
-  def fruta(options = {})
-    platos << " (#{options[:titulo]})" if options[:titulo]
+  def fruta(titulo,options = {})
+    platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
     platos << " (#{options[:gramos]})" if options[:gramos]
     platos << "\n"
   end
 
-  def cereal(options = {})
-    platos << " (#{options[:titulo]})" if options[:titulo]
+  def cereal(titulo,options = {})
+    platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
     platos << " (#{options[:gramos]})" if options[:gramos]
     platos << "\n"
   end
   
-  def proteina(options = {})
-    platos << " (#{options[:titulo]})" if options[:titulo]
+  def proteina(titulo,options = {})
+    platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
     platos << " (#{options[:gramos]})" if options[:gramos]
     platos << "\n"
   end
   
-  def aceite(options = {})
-    platos << " (#{options[:titulo]})" if options[:titulo]
+  def aceite(titulo,options = {})
+    platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
     platos << " (#{options[:gramos]})" if options[:gramos]
     platos << "\n"

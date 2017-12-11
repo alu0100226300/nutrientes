@@ -456,8 +456,8 @@ context 'Comidas' do
 end
 
 
-context 'Operaciones de Ordenación' do
-before :each do
+  context 'Operaciones de Ordenación' do
+    before :each do
       @alimento1 = Alimentos.new("Huevo frito", 14.1, 0.0, 19.5)
       @alimento2 = Alimentos.new("Leche vaca", 3.3, 4.8, 3.2)
       @alimento3 = Alimentos.new("Yogurt", 3.8, 4.8, 3.8)
@@ -493,10 +493,9 @@ before :each do
       @alimento9, @alimento10, @alimento11, @alimento12, @alimento13, @alimento14, @alimento15, @alimento16,
       @alimento17, @alimento18, @alimento19]
       @lista1 = Lista.new(nil,nil)
+    end
 
-end
-
-     it "Nuevo array con los elementos ordenados por su valor energético usando bucles for" do
+        it "Nuevo array con los elementos ordenados por su valor energético usando bucles for" do
             @each = @array
             Benchmark.bm do |f| 
                 f.report("for:"){
@@ -517,10 +516,10 @@ end
             #for i in 0..@each.size-1
             #  puts @each[i].get_energetico
             #end
-     end  
+       end  
 
 
- it "Nuevo array con los elementos ordenados por su valor energético usando el método each" do
+          it "Nuevo array con los elementos ordenados por su valor energético usando el método each" do
             @aux = []
             for i in 0..@array.size-1
                   @aux << @array[i].get_energetico
@@ -547,7 +546,7 @@ end
         end
 
 
-  it "Nuevo array con los elementos ordenados por su valor energético usando el método sort" do
+        it "Nuevo array con los elementos ordenados por su valor energético usando el método sort" do
             aux = []
             Benchmark.bm do |s| 
                 s.report("sort:"){
@@ -558,6 +557,31 @@ end
             #@lista1.to_s  
             expect(@array).to match_array(aux)
         end  
+
+  end
+
+  context 'AlimentoDSL' do
+     before :each do
+       @lentejas_arroz = AlimentoDSL.new("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha") do 
+
+	vegetal "Tomate", 
+		:porcion => "2 piezas pequenas"
+	fruta   "Platano", 
+		:gramos => 20 
+        cereal  "Arroz",
+		:porcion => "1 taza" 
+        proteina "Lentejas", 
+		:porcion => "1/2 cucharon" 
+        proteina "Huevo", 
+		:porcion => "1 pieza" 
+        aceite "Aceite de oliva", 
+		:porcion => "1/2 cucharada"
+      end
+     end
+     it 'Comprueba Menu del Lunes con DSL' do
+	expect(@lentejas_arroz.to_s).to eq("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha\n=================================================================\n\nComposición nutricional:\n\nTomate (2 piezas pequenas)\n\nPlatano (20)\n\nArroz (1 taza)\n\nLentejas (1/2 cucharon)\n\nHuevo (1 pieza)\n\nAceite de oliva (1/2 cucharada)\n\n")
+        #puts @lentejas_arroz.to_s
+     end
 
 end
 end
