@@ -8,6 +8,8 @@ class AlimentoDSL
     instance_eval &block
   end
 
+
+#funciones del block
   def vegetal(titulo, options = {})
     platos << titulo
     platos << " (#{options[:porcion]})" if options[:porcion]
