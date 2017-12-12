@@ -20,7 +20,8 @@ Gem::Specification.new do |spec|
   #else
   #  raise "RubyGems 2.0 or newer is required to protect against " \
   #    "public gem pushes."
-  #end
+  #end 
+  end
 
   spec.files         = `git ls-files -z`.split("\x0").reject do |f|
     f.match(%r{^(test|spec|features)/})
