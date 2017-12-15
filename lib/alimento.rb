@@ -5,7 +5,7 @@ require "alimento/lista"
 require "alimento/comida"
 require "alimento/individuo"
 require "alimento/calculadora"
-require "alimento/alimentodsl"
+require "alimento/platohardvard"
 
 
 module Alimento
