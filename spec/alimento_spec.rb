@@ -560,9 +560,9 @@ end
 
   end
 
-  context 'AlimentoDSL' do
+  context 'Plato Hardvard' do
      before :each do
-       @lentejas_arroz = AlimentoDSL.new("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha") do 
+       @lentejas_arroz = PlatoHardvard.new("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha") do 
 
 	vegetal "Tomate", 
 		:porcion => "2 piezas pequenas"
@@ -578,9 +578,9 @@ end
 		:porcion => "1/2 cucharada"
       end
      end
-     it 'Comprueba Menu del Lunes con DSL' do
-	expect(@lentejas_arroz.to_s).to eq("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha\n=================================================================\n\nComposición nutricional:\n\nTomate (2 piezas pequenas)\n\nPlatano (20)\n\nArroz (1 taza)\n\nLentejas (1/2 cucharon)\n\nHuevo (1 pieza)\n\nAceite de oliva (1/2 cucharada)\n\n")
-        #puts @lentejas_arroz.to_s
+     it 'Comprueba el PLato Hardvard' do
+        puts @lentejas_arroz.to_s
+	expect(@lentejas_arroz.to_s).to eq("Lentejas con arroz, salsa de tomate, huevo y platano a la plancha\n=================================================================\n\nComposición nutricional:\n\nTomate, 6.0, 10.0, 4.0 100.0\nPlatano, 18.0, 30.0, 12.0 300.0\nArroz, 3.0, 5.0, 2.0 50.0\nLentejas, 36.0, 60.0, 24.0 600.0\nHuevo, 3.0, 5.0, 2.0 50.0\nAceite de oliva, 18.0, 30.0, 12.0 300.0\nValor Energetico total                      1400.0")
      end
 
 end
